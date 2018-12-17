@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+
+#ifndef db_requestsH
+#define db_requestsH
+//---------------------------------------------------------------------------
+#include <vector>
+
+#include "USB.h"
+#include "settings.h"
+#include "sqlite3.h"
+
+const int CANT_OPEN_DATABASE = 1;
+const int SQL_ERROR = 2;
+
+const char* SQL = "CREATE TABLE IF NOT EXISTS foo(a,b,c); INSERT INTO FOO VALUES(1,2,3); INSERT INTO FOO SELECT * FROM FOO;";
+
+std::vector<USB> GetUSBListFromDB();
+bool USBIsOnDatabase(USB &usb);
+int AddUsbToDatabase(USB &usb);
+int DeleteUsbFromDatabase(USB &usb);
+
+
+#endif
+

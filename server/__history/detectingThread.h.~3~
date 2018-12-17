@@ -1,0 +1,18 @@
+//---------------------------------------------------------------------------
+
+#ifndef detectingThreadH
+#define detectingThreadH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+//---------------------------------------------------------------------------
+class ConnectDetectingThread : public TThread
+{
+private:
+protected:
+	void __fastcall Execute();
+public:
+	__fastcall ConnectDetectingThread(bool CreateSuspended);
+    __fastcall UpdateCaption();
+};
+//---------------------------------------------------------------------------
+#endif

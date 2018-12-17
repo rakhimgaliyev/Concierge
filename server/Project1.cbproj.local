@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/11/23 17:00:13.000.458,=C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/11/23 17:00:15.000.625,=C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2018/11/23 18:29:24.000.881,=C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2018/11/23 18:29:25.000.176,=C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/11/23 18:29:35.000.414,C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit1.h</Transaction>
+    <Transaction>2018/11/23 18:29:35.000.414,C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit1.dfm</Transaction>
+    <Transaction>2018/11/23 18:29:35.000.414,C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit1.cpp</Transaction>
+    <Transaction>2018/11/23 18:29:40.000.815,C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Project1PCH1.h</Transaction>
+    <Transaction>2018/11/23 18:29:42.000.311,C:\Users\rakhi\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Project1.cbproj</Transaction>
+    <Transaction>2018/11/30 03:17:52.000.501,=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/11/30 03:18:03.000.455,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\USB.cpp</Transaction>
+    <Transaction>2018/11/30 03:18:03.000.455,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\USB.h</Transaction>
+    <Transaction>2018/12/01 19:38:12.000.701,=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/01 19:39:07.000.591,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\win_requests.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.h</Transaction>
+    <Transaction>2018/12/01 19:39:07.000.591,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\win_requests.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/01 19:41:24.000.969,=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/01 19:41:39.000.185,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\db_requests.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/01 19:41:39.000.185,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\db_requests.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.h</Transaction>
+    <Transaction>2018/12/01 22:13:25.000.301,=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/01 22:13:33.000.424,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\settings.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.h</Transaction>
+    <Transaction>2018/12/01 22:13:33.000.424,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\settings.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/02 23:03:32.000.693,=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/02 23:03:45.000.434,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\thread.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.h</Transaction>
+    <Transaction>2018/12/02 23:03:45.000.434,C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\thread.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/16 20:45:02.000.750,=C:\Users\rakhi\OneDrive\Рабочий стол\concierge\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/16 20:45:18.000.078,C:\Users\rakhi\OneDrive\Рабочий стол\concierge\server\client_request.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\concierge\server\Unit2.cpp</Transaction>
+    <Transaction>2018/12/16 20:45:18.000.078,C:\Users\rakhi\OneDrive\Рабочий стол\concierge\server\client_request.h=C:\Users\rakhi\OneDrive\Рабочий стол\concierge\server\Unit2.h</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="Unit1.cpp"/>
+    <File Path="Unit1.cpp"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit1.h"/>
+    <File Path="USB.cpp"/>
+    <File Path="USB.cpp"/>
+    <File Path="USB.h"/>
+    <File Path="db_requests.cpp"/>
+    <File Path="db_requests.cpp"/>
+    <File Path="db_requests.h"/>
+    <File Path="win_requests.cpp"/>
+    <File Path="win_requests.cpp"/>
+    <File Path="win_requests.h"/>
+    <File Path="settings.cpp"/>
+    <File Path="settings.cpp"/>
+    <File Path="settings.h"/>
+    <File Path="thread.cpp"/>
+    <File Path="thread.cpp"/>
+    <File Path="thread.h"/>
+  </ProjectSortOrder>
+</BorlandProject>
