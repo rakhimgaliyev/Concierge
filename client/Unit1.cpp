@@ -52,28 +52,35 @@ void __fastcall TForm1::ClientSocket1Read(TObject *Sender, TCustomWinSocket *Soc
 {
 	AnsiString s = Socket->ReceiveText();
 	AnsiString code = s.SubString(0, s.Pos(":") - 1);
+	Memo1->Lines->Add(s);
 	if (StrToInt(code) == SUCCESS) {
 		Memo1->Lines->Add("SUCCESS");
 		if (s.Pos(":") == 0) {
 			return;
 		}
-		s = s.SubString(s.Pos(":") + 1, s.Length() - s.Pos(":"));
+		s = s.SubString(s.Pos(":") + 1, s.Length());
 		int devCount = 0;
 		while (s.Length() > 0) {
 			if (s.Pos(":") == 0) {
 				break;
 			}
 			AnsiString vid = s.SubString(0, s.Pos(":") - 1);
-			s = s.SubString(s.Pos(":") + 1, s.Length() - s.Pos(":"));
+			s = s.SubString(s.Pos(":") + 1, s.Length());
 			if (s.Pos(":") == 0) {
 				break;
 			}
 			AnsiString pid = s.SubString(0, s.Pos(":") - 1);
-			s = s.SubString(s.Pos(":") + 1, s.Length() - s.Pos(":"));
+			s = s.SubString(s.Pos(":") + 1, s.Length());
+			if (s.Pos(":") == 0) {
+				break;
+			}
+			AnsiString slug = s.SubString(0, s.Pos(":") - 1);
+			s = s.SubString(s.Pos(":") + 1, s.Length());
 			devCount++;
 			Memo1->Lines->Add(IntToStr(devCount) + " USB:");
 			Memo1->Lines->Add("    VID: " + vid);
 			Memo1->Lines->Add("    PID: " + pid);
+            Memo1->Lines->Add("    Slug: " + slug);
 			if (s.Pos(":") == 0) {
 				break;
 			}
@@ -84,7 +91,7 @@ void __fastcall TForm1::ClientSocket1Read(TObject *Sender, TCustomWinSocket *Soc
 				if (s[1] == '1') {
 					Memo1->Lines->Add("    (registered)");
 				}
-				s = s.SubString(s.Pos(":") + 1, s.Length() - s.Pos(":"));
+				s = s.SubString(s.Pos(":") + 1, s.Length());
 			}
 		}
 		if (devCount == 0) {
@@ -115,12 +122,21 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
 {
 	StrToInt(Edit1->Text);
 	StrToInt(Edit2->Text);
+	if (Edit3->Text.Pos(" ") > 0) {
+		ShowMessage("Please, delete all spaces from slug");
+		return;
+	}
+	if (Edit3->Text == "") {
+		ShowMessage("Slug field should not be empty");
+		return;
+	}
 	if (!ClientSocket1->Active) {
 		 Memo1->Lines->Add("Can't reach server");
 		 return;
 	}
 	AnsiString s = IntToStr(ADD_TO_DB) + ":" +
-		Edit1->Text + ":" + Edit2->Text + ":";
+		Edit1->Text + ":" + Edit2->Text + ":" +
+        Edit3->Text + ":";
 	ClientSocket1->Socket->SendText(s);
 	Memo1->Lines->Add("Request sent");
 }
@@ -130,6 +146,14 @@ void __fastcall TForm1::Button5Click(TObject *Sender)
 {
 	StrToInt(Edit1->Text);
 	StrToInt(Edit2->Text);
+	if (Edit3->Text.Pos(" ") > 0) {
+		ShowMessage("Please, delete all spaces from slug");
+		return;
+	}
+	if (Edit3->Text == "") {
+		ShowMessage("Slug field should not be empty");
+		return;
+	}
 	if (!ClientSocket1->Active) {
 		 Memo1->Lines->Add("Can't reach server");
 		 return;

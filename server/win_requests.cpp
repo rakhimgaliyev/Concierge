@@ -85,8 +85,9 @@ std::vector<USB> GetConnectedUsbList(const HDEVINFO &deviceInfoSet)
 
 		int vid = 0;
 		int pid = 0;
+		AnsiString name = "";
 		GetUSBVidAndPid(szDeviceInstanceID, vid, pid);
-		USB usb(deviceInfoData.DevInst, vid, pid);
+		USB usb(deviceInfoData.DevInst, vid, pid, name);
 		USBlist.push_back(usb);
 	}
 	SetupDiDestroyDeviceInfoList(deviceInfoSet);

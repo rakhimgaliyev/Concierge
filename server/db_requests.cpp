@@ -13,12 +13,13 @@ std::vector<USB> GetUSBListFromDB() {
 
 	for (int i = 0; i < list1->Count; i++) {
 		AnsiString str = list1[0][i];
-		int StrLenInt = str.Length();
-		int SpacePlaceInt = str.Pos(" ");
-		int vid = StrToInt(str.SubString(1, SpacePlaceInt - 1));
 		//AnsiStrings always start with 1 and not 0
-		int pid = StrToInt(str.SubString(SpacePlaceInt + 1, StrLenInt));
-		USB usb(NULL, vid, pid);
+		int vid = StrToInt(str.SubString(1, str.Pos(" ") - 1));
+		str = str.SubString(str.Pos(" ") + 1, str.Length());
+		int pid = StrToInt(str.SubString(1, str.Pos(" ") - 1));
+		str = str.SubString(str.Pos(" ") + 1, str.Length());
+		AnsiString name = str;
+		USB usb(NULL, vid, pid, name);
 		res.push_back(usb);
 	}
 	delete list1;
@@ -42,7 +43,8 @@ int AddUsbToDatabase(USB &usb) {
 	}
 
 	TStringList *list1 = new TStringList;
-	AnsiString USBstring = IntToStr(usb.vid) + " " + IntToStr(usb.pid);
+	AnsiString USBstring = IntToStr(usb.vid) + " " + IntToStr(usb.pid)
+		+ " " + usb.name;
 	list1->Add(USBstring);
 	if (!FileExists(USBDatabaseName)) {
 		list1->SaveToFile(USBDatabaseName);
@@ -70,12 +72,11 @@ int DeleteUsbFromDatabase(USB &usb) {
     int deletingStringIndex = -1;
 	for (int i = 0; i < list1->Count; i++) {
 		AnsiString str = list1[0][i];
-		int StrLenInt = str.Length();
-		int SpacePlaceInt = str.Pos(" ");
-		int vid = StrToInt(str.SubString(1, SpacePlaceInt - 1));
-		//AnsiStrings always start with 1 and not 0
-		int pid = StrToInt(str.SubString(SpacePlaceInt + 1, StrLenInt));
-		USB _usb(USB_HAS_NO_DEVINST, vid, pid);
+		int vid = StrToInt(str.SubString(1, str.Pos(" ") - 1));
+		str = str.SubString(str.Pos(" ") + 1, str.Length());
+		int pid = StrToInt(str.SubString(1, str.Pos(" ") - 1));
+		AnsiString name = "";
+		USB _usb(USB_HAS_NO_DEVINST, vid, pid, name);
 		if (_usb == usb) {
 			deletingStringIndex = i;
 			break;

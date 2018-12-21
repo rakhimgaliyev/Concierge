@@ -8,14 +8,15 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 #include <System.Win.ScktComp.hpp>
+#include <Vcl.ExtCtrls.hpp>
 
+/*
+#include <windows.h>
 #include <SetupAPI.h>
 #include <cfgmgr32.h>
 #include <initguid.h>
 #include <winioctl.h>
-#include <windows.h>
-#include <Vcl.ExtCtrls.hpp>
-
+*/
 #include <vector>
 #include <string>
 #include <thread>

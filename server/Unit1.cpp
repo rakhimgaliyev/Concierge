@@ -61,7 +61,10 @@ void __fastcall TForm1::ClientSentMessage(TObject *Sender, TCustomWinSocket *Soc
 			buff = buff + ":";
 			buff = buff + IntToStr(USBList[i].pid);
 			buff = buff + ":";
-			USB usb(NULL, USBList[i].vid, USBList[i].pid);
+			buff = buff + USBList[i].name;
+			buff = buff + ":";
+			AnsiString name = "";
+			USB usb(NULL, USBList[i].vid, USBList[i].pid, name);
 			if (USBIsOnDatabase(usb)) {
 				buff = buff + "1";
 			} else {
@@ -81,29 +84,9 @@ void __fastcall TForm1::ClientSentMessage(TObject *Sender, TCustomWinSocket *Soc
 			buff = buff + ":";
 			buff = buff + IntToStr(USBList[i].pid);
 			buff = buff + ":";
-		}
-		Socket->SendText(buff);
-		return;
-	}
-	if (code == GET_USB_LIST_FROM_DB) {
-		buff = IntToStr(SUCCESS) + ":";
-		std::vector<USB> USBList = GetUSBListFromDB();
-		for (size_t i = 0; i < USBList.size(); i++) {
-			buff = buff + IntToStr(USBList[i].vid);
+			buff = buff + USBList[i].name;
 			buff = buff + ":";
-			buff = buff + IntToStr(USBList[i].pid);
-			buff = buff + ":";
-		}
-		Socket->SendText(buff);
-		return;
-	}
-	if (code == GET_USB_LIST_FROM_DB) {
-		buff = IntToStr(SUCCESS) + ":";
-		std::vector<USB> USBList = GetUSBListFromDB();
-		for (size_t i = 0; i < USBList.size(); i++) {
-			buff = buff + IntToStr(USBList[i].vid);
-			buff = buff + ":";
-			buff = buff + IntToStr(USBList[i].pid);
+			buff = buff + "1";
 			buff = buff + ":";
 		}
 		Socket->SendText(buff);
@@ -121,7 +104,12 @@ void __fastcall TForm1::ClientSentMessage(TObject *Sender, TCustomWinSocket *Soc
 			Socket->SendText("WRONG REQUEST FORMAT");
 		}
 		AnsiString pid = s.SubString(0, s.Pos(":") - 1);
-		Memo1->Lines->Add(vid + "  " + pid);
+		s = s.SubString(s.Pos(":") + 1, s.Length() - s.Pos(":"));
+		if (s.Pos(":") == 0) {
+			Socket->SendText("WRONG REQUEST FORMAT");
+		}
+		AnsiString name = s.SubString(0, s.Pos(":") - 1);
+		Memo1->Lines->Add(vid + "  " + pid + " " + name);
 		for (size_t i = 1; i < vid.Length(); i++) {
 			if ((vid[i] >= '9') || (vid[i] <= '0')) {
 				Socket->SendText("WRONG REQUEST FORMAT");
@@ -134,7 +122,7 @@ void __fastcall TForm1::ClientSentMessage(TObject *Sender, TCustomWinSocket *Soc
 				return;
 			}
 		}
-		USB usb(NULL, StrToInt(vid), StrToInt(pid));
+		USB usb(NULL, StrToInt(vid), StrToInt(pid), name);
 		runThr->Suspend();
 		if (code == ADD_TO_DB) {
 			AddUsbToDatabase(usb);

@@ -2,6 +2,9 @@
 #ifndef USBH
 #define USBH
 //---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+
+#include <windows.h>
 #include <cfgmgr32.h>
 
 #include <vector>
@@ -14,8 +17,9 @@ struct USB {
 	DEVINST devInst;
 	int vid;
 	int pid;
+    AnsiString name;
 
-	USB(const DEVINST &_devInst, const int &_vid, const int &_pid);
+	USB(const DEVINST &_devInst, const int &_vid, const int &_pid, AnsiString name);
 	USB operator=(const USB &_usb);
 	const bool operator != (const USB &_usb);
 	const bool operator == (const USB &_usb);

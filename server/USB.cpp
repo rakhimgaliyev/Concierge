@@ -7,10 +7,11 @@
 #pragma package(smart_init)
 
 
-USB::USB(const DEVINST &_devInst, const int &_vid, const int &_pid) {
+USB::USB(const DEVINST &_devInst, const int &_vid, const int &_pid, AnsiString _name) {
 	devInst = _devInst;
 	vid = _vid;
 	pid = _pid;
+    name = _name;
 }
 
 bool GetUSBVidAndPid(TCHAR DeviceInstance[], int &vid, int &pid) {
@@ -46,6 +47,7 @@ bool GetUSBVidAndPid(TCHAR DeviceInstance[], int &vid, int &pid) {
 USB USB::operator=(const USB &_usb) {
 	this->vid = _usb.vid;
 	this->pid = _usb.pid;
+    this->name = _usb.name;
     return *this;
 }
 
