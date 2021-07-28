@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899/12/30 00:00:00.000.191,C:\Users\root\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\client\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.102,C:\Users\root\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\client\Project1.cbproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.429,=C:\Users\root\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.726,C:\Users\root\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\client\Project1PCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.005,=C:\Users\root\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.191,C:\Users\root\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\client\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.191,C:\Users\root\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\rakhi\OneDrive\Рабочий стол\My_Project(rad studio)\client\Unit1.h</Transaction>
+    <Transaction>2018/12/16 22:53:08.000.720,C:\Users\rakhi\OneDrive\Рабочий стол\concierge\client\Project1.cbproj=C:\Users\rakhi\OneDrive\Рабочий стол\concierge\client\Project2.cbproj</Transaction>
+    <Transaction>2018/12/16 22:53:08.000.572,C:\Users\rakhi\OneDrive\Рабочий стол\concierge\client\Project1PCH1.h=C:\Users\rakhi\OneDrive\Рабочий стол\concierge\client\Project2PCH1.h</Transaction>
+  </Transactions>
+</BorlandProject>
